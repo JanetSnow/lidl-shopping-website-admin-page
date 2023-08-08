@@ -27,13 +27,13 @@ const Login = () => {
         <input
         style={{ padding: 10, marginBottom:20 }}
         type="text"
-        placeholder="username"
+        placeholder="admin@gmail.com"
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
         style={{ padding: 10, marginBottom: 20 }}
         type="password"
-        placeholder="password"
+        placeholder="1234567"
         onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={handleLogin} style={{ padding: 10, width:100 }}>
