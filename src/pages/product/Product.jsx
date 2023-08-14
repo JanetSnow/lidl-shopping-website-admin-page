@@ -69,7 +69,7 @@ export default function Product() {
 
   const handleChange = (e) => {
     setInputs((prev) => {
-      return { ...prev, [e.target.name]: e.target.value };
+      return { ...prev,[e.target.name]: e.target.value };
     });
   };
 
@@ -145,7 +145,7 @@ export default function Product() {
             </div>
             <div className="productInfoItem">
               <span className="productInfoKey">in stock:</span>
-              <span className="productInfoValue">{product.inStock}</span>
+              <span className="productInfoValue">{product.inStock.toString()}</span>
             </div>
           </div>
         </div>
@@ -161,6 +161,19 @@ export default function Product() {
             <input name="price" type="number" onChange={handleChange} placeholder={product.price} />
             <label>In Stock</label>
             <select name="inStock" id="idStock" onChange={handleChange}>
+              <option value="" selected disabled hidden>Choose here</option>
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+            <label>Has Discount</label>
+            <select name="hasDiscount" onChange={handleChange}>
+              <option value="" selected disabled hidden>Choose here</option>
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+            <label>Is Flavour Week</label>
+            <select name="isFlavourWeek" onChange={handleChange}>
+              <option value="" selected disabled hidden>Choose here</option>
               <option value="true">Yes</option>
               <option value="false">No</option>
             </select>

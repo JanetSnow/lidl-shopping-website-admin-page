@@ -116,6 +116,23 @@ export default function NewProduct() {
         <div className="addProductItem">
           <label>Stock</label>
           <select name="inStock" onChange={handleChange}>
+            <option value="" selected disabled hidden>Choose here</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+        <div className="addProductItem">
+          <label>Discount</label>
+          <select name="hasDiscount" onChange={handleChange}>
+            <option value="" selected disabled hidden>Choose here</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+        <div className="addProductItem">
+          <label>FlavourWeek</label>
+          <select name="isFlavourWeek" onChange={handleChange}>
+            <option value="" selected disabled hidden>Choose here</option>
             <option value="true">Yes</option>
             <option value="false">No</option>
           </select>
